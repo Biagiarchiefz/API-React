@@ -2,3 +2,31 @@
 
 // useeffect()  adalah react hook untuk mengubah suatu komponen saat pertama kali di render (cuma sekali) dan 
 // pada saat komponen itu di hapus atau berpindah ke halaman lain dia akan berubah lagi  []
+
+
+// => useEffect digunakan di React untuk menjalankan side effect atau efek samping, seperti mengambil data dari API, 
+// berinteraksi dengan DOM, atau menjalankan fungsi ketika komponen pertama kali ditampilkan atau ketika state tertentu berubah.
+
+
+
+//Cara Kerja Ilustrasi:
+Misalkan kita sedang membuat aplikasi e-commerce yang menampilkan daftar produk. Berikut adalah cara kerja dari useEffect ini:
+
+1. Komponen Pertama Kali Ditampilkan:
+   * Saat komponen pertama kali muncul di layar, useEffect langsung menjalankan getDataProduct().
+   * getDataProduct() kemudian menghubungi API dan mengambil data produk, lalu menyimpannya ke dalam state product dengan setProducts(dataProduct).
+
+2. Data Diterima dari API:
+    * Setelah data produk diambil, setProducts(dataProduct) memperbarui state product sehingga komponen akan re-render (ditampilkan ulang) untuk menampilkan daftar produk.
+
+
+
+   # ( Ketika menjalankan fungsi, jika ada await, JavaScript akan menunggu hingga proses selesai. )
+
+   # ( async () => { ... } adalah cara membuat fungsi asinkron menggunakan sintaks arrow function (=>) di JavaScript. Fungsi asinkron memungkinkan
+       kita menjalankan kode yang membutuhkan waktu untuk selesai (seperti mengambil data dari API) tanpa harus menghentikan eksekusi kode lainnya. )
+
+  # ( Sinkron: Kamu memasak satu hidangan, menunggu hingga matang, lalu baru mulai mengerjakan tugas.)
+
+  # ( Asinkron: Kamu memasukkan makanan ke oven (yang memerlukan waktu untuk matang), lalu mulai mengerjakan tugas.
+         Sementara makanan matang di latar belakang, kamu bisa menyelesaikan sebagian tugasmu tanpa menunggu makanan selesai dulu.) 
